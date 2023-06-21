@@ -1,0 +1,143 @@
+* {
+    font-family: 'Manrope', sans-serif;  
+}
+
+body{
+    padding: 25px;
+    min-height: 90vh;
+    background-color: hsl(218, 23%, 16%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.advice-sct {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.advice {
+    margin: 0 auto;
+    background-color: hsl(217, 19%, 24%);
+    width: 550px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    padding-bottom: 60px;
+}
+
+.advice > h3 {
+    font-weight: 800;
+    width: 80%;
+    font-size: 28px;
+    color: hsl(193, 38%, 86%);
+    margin-top: 5px;
+    margin-bottom: 35px;
+}
+
+.dice-bg {
+    margin: 0 auto;
+    margin-top: -35px;
+    background-color: hsl(150, 100%, 66%);
+    padding: 20px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0px;
+    border: none;
+}
+
+.dice {
+    transform: scale(1);
+}
+
+.advice-id {
+    font-size: 13px;
+    color: hsl(150, 100%, 66%);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+.mobile {
+    display: none;
+}
+
+.dice-bg:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 35px 5px hsla(150, 100%, 66%, 0.596);
+}
+
+@media (375px < width <= 550px) {
+    body {
+        padding: 10px;
+    }
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+    .advice > h3 {
+        width: 90%;
+        font-size: 23px;
+    }
+    .advice-sct {
+        width: 80%;
+    }
+    .advice {
+        width: 100%;
+        padding-bottom: 55px;
+    }
+    .dice-bg {
+        margin-top: -35px;
+        top: 0;
+        padding: 20px;
+    }
+    .dice {
+        transform: scale(1);
+    }
+}
+
+@media (width <= 375px) {
+    body {
+        padding: 5px;
+    }
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+
+    svg.mobile {
+        transform: scale(0.8);
+        margin-top: 5px;
+    }
+
+    .advice > h3 {
+        width: 90%;
+        font-size: 23px;
+    }
+    .advice-sct {
+        width: 100%;
+    }
+    .advice {
+        width: 95%;
+        padding-bottom: 40px;
+    }
+    .dice-bg {
+        top: -30;
+    }
+    .dice {
+        transform: scale(1);
+    }
+}
